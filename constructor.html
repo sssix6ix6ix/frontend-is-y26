@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Конструктор расписания</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/constructor.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Конструктор расписания занятий</h1>
+    </header>">
+
+    <nav class="nav">
+        <ul>
+            <li class="nav__item"><a href="index.html">Главная</a></li>
+            <li class="nav__item"><a href="about.html"> Обо мне</a</li>
+            <li class="nav__item"><a href="projects.html">Проекты</a></li>
+            <li class="nav__item"><a href="contact.html">Контакты</a></li>
+            <li class="nav__item"><a href="constructor.html">Конструктор расписания занятий</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <form id="scheduleForm" class="form">
+            <label for="weekType">Выберите тип недели:</label>
+            <select id="weekType" name="weekType" class="input-select">
+                <option value="5">5-дневная</option>
+                <option value="6">6-дневная</option>
+            </select>
+
+            <label for="maxClasses">Количество занятий в день:</label>
+            <input type="number" id="maxClasses" name="maxClasses" min="1" value="6" class="input-number">
+
+            <label for="language">Выберите язык:</label>
+            <select id="language" name="language" class="input-select">
+                <option value="ru">Русский</option>
+                <option value="en">Английский</option>
+            </select>
+
+            <button type="submit" class="button">Сгенерировать расписание</button>
+            <button type="button" id="clearSchedule" class="button button-danger">Очистить расписание</button>
+        </form>
+
+        <div id="scheduleOutput" class="schedule-output"></div>
+
+        <script src="js/constructor.js"></script>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Матвеев Андрей. Все права защищены.</p>
+        <address>
+            Свяжитесь со мной: <a href="mailto:zxc@example.com">zxc@example.com</a>
+        </address>
+    </footer>
+</body>
+</html>
