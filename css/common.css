@@ -1,0 +1,125 @@
+/* Основные стили для всей страницы */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Заголовки, абзацы и текстовые блоки */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.5em 0;
+  }
+  
+  p {
+    margin: 1em 0;
+    line-height: 1.6em;
+  }
+  
+  /* Структурные элементы, примененные к БЭМ */
+  .header {
+    background-color: #6c63ff;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .nav {
+    background-color: #4842c2;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .nav__item {
+    list-style: none;
+    margin: 0 15px;
+  }
+  
+  .nav__item a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .nav__item a:hover {
+    background-color: #6c63ff;
+    border-radius: 5px;
+  }
+  
+  .main {
+    padding: 20px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .footer {
+    background-color: #333366;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .article {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  
+  .blockquote {
+    margin: 20px;
+    padding: 10px;
+    background-color: #e6e6fa;
+    border-left: 5px solid #6c63ff;
+    font-style: italic;
+  }
+  
+  pre, code {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  
+  /* Изображения */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Список */
+  ul, ol {
+    padding-left: 20px;
+  }
+  
+  /* Модификаторы (например, для текстов) */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .text-italic {
+    font-style: italic;
+  }
+  
+  .text-bold {
+    font-weight: bold;
+  }
