@@ -35,13 +35,21 @@ document.addEventListener('DOMContentLoaded', function() {
             ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
             en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
         };
+        const classTranslete = {
+            ru: 'Урок',
+            en: 'Lesson'
+        }
+        const dayTranslate = {
+            ru: "День",
+            en: "Day"
+        }
 
         const days = weekType === 5 ? daysOfWeek[language].slice(0, 5) : daysOfWeek[language];
 
         let scheduleData = loadScheduleData() || {};
         let scheduleTable = '<table>';
         scheduleTable += '<tr>';
-        scheduleTable += '<th>Урок \\ День</th>';
+        scheduleTable += `<th>${classTranslete[language]} \\ ${dayTranslate[language]}</th>`;
         days.forEach(day => {
             scheduleTable += `<th>${day}</th>`;
         });
