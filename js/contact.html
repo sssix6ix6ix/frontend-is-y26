@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
+    <title>Контакты - Личное портфолио</title>
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/todo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-
     <header class="header">
-        <h1>TODO list</h1>
+        <h1>Контакты</h1>
     </header>
-
+    
     <nav class="nav">
         <ul>
             <li class="nav__item"><a href="index.html">Главная</a></li>
@@ -26,18 +23,19 @@
         </ul>
     </nav>
 
-    <main class="main">
-        <div id="app">
-            <div class="preloader"></div>
-            <div id="todos"></div>
-            <div class="error-message"></div>
-        </div>
-        <!-- Подключение скриптов для SweetAlert2 и Toastr -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-        <script src="js/todo.js" defer></script>    
-    </main>
 
+    <main class="main">
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Вы можете связаться со мной через следующие платформы:</p>
+            <address>
+                Электронная почта: <a href="mailto:zxc@example.com">zxc@example.com</a><br>
+                LeetCode: <a href="https://leetcode.com/u/6ix6ix6ix-/">6ix6ix6ix</a><br>
+                CodeForces: <a href="https://codeforces.net/profile/6ix6ix6ix">6ix6ix6ix</a>
+            </address>
+        </section>
+    </main>
+    
     <footer class="footer">
         <p>&copy; 2024 Матвеев Андрей. Все права защищены.</p>
         <address>
