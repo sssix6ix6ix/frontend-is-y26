@@ -1,0 +1,107 @@
+...body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Стили меню */
+
+.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.input-select, .input-number {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+/* Стили для вывода расписания */
+
+.schedule-output {
+    margin-top: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #eee;
+}
+
+.schedule-input {
+    width: 100%;
+    border: none;
+    text-align: center;
+    background-color: transparent;
+}
+
+.schedule-input:focus {
+    outline: none;
+    background-color: #f0f0f0;
+}
+
+.button-danger {
+    background-color: #dc3545;
+}
+
+.button-danger:hover {
+    background-color: #c82333;
+}
