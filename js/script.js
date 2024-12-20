@@ -11,12 +11,20 @@
     });
 })();
 
+
 (function() {
     const activeClass = 'active';
     const navItems = document.querySelectorAll('.nav__item a');
-    
+    const currentUrl = document.location.href;
+
     navItems.forEach(item => {
-        if (item.href === document.location.href) {
+        const itemUrl = item.href;
+
+        const isExactMatch = itemUrl === currentUrl;
+        const isHomePage = (currentUrl.endsWith('/') || currentUrl.endsWith('/index.html')) && 
+                            (itemUrl.endsWith('/') || itemUrl.endsWith('/index.html'));
+
+        if (isExactMatch || isHomePage) {
             item.classList.add(activeClass);
         }
     });
