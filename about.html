@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-    <header>
-        <h1>Проекты</h1>
+    <header class="header">
+        <h1>Обо мне</h1>
     </header>
     
     <nav class="nav">
         <ul>
             <li class="nav__item"><a href="index.html">Главная</a></li>
-            <li class="nav__item"><a href="about.html"> Обо мне</a</l>
+            <li class="nav__item"><a href="about.html"> Обо мне</a</li>
             <li class="nav__item"><a href="projects.html">Проекты</a></li>
             <li class="nav__item"><a href="contact.html">Контакты</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section id="about" class="section">
-            <h2>Обо мне</h2>
+    <main class="main">
+        <section id="about" class="section"></section>
+            <h2>Обо мне </h2>
             <img src="assets/about.jpg" alt="Ваше изображение" class="about-pic about-pic-shadow">
             <p>Меня зовут <strong>Матвеев Андрей</strong>, я <em>разработчик программного обеспечения</em> с опытом работы более 5 лет в крудошлепанье.</p>
         </section>
@@ -56,14 +56,15 @@
                 </pre>
             </aside>
 
-            <section id="code-snippet">
+            <section id="code-snippet" class="main__aside-item main__aside-code">
                 <h2>Какой-то код</h2>
-                <pre><code>
-    // Пример простого JavaScript кода
-    function greet(name) {
-        console.log("Привет, " + name);
-    }
-                </code></pre>
+                <pre>
+                    <code>
+function greet(name) {
+    console.log("Привет, " + name);
+}
+                    </code>
+                </pre>
             </section>
             
             <section id="formula">
@@ -73,8 +74,11 @@
         </section>
     </main>
     
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 Матвеев Андрей. Все права защищены.</p>
+        <address>
+            Свяжитесь со мной: <a href="mailto:zxc@example.com">zxc@example.com</a>
+        </address>
     </footer>
 </body>
 </html>

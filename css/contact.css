@@ -10,29 +10,11 @@ body {
     color: #ffffff;
     padding: 20px;
     text-align: center;
-}
-
-.nav {
-    background-color: #4842c2;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-.nav__item {
-    list-style: none;
-    margin: 0 15px;
-}
-
-.nav__item a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-.nav__item a:hover {
-    background-color: #6c63ff;
-    border-radius: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
 }
 
 .section {
@@ -41,11 +23,4 @@ body {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.footer {
-    background-color: #333366;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
 }

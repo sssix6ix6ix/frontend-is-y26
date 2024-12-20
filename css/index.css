@@ -1,50 +1,69 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-}
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+    }
 
-.header {
-    background-color: #6c63ff;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
+    .intro-section, .gallery-section, .table-section {
+        margin: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-.nav {
-    background-color: #4842c2;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
+    .gallery {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
-.nav__item {
-    list-style: none;
-    margin: 0 15px;
-}
+    .gallery img {
+        width: 30%;
+        height: auto;
+        margin-bottom: 20px;
+    }
 
-.nav__item a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
+    .main__section {
+        padding: 5px;
+        border-style: outset;
+        margin-bottom: 10px;
+      }
 
-.nav__item a:hover {
-    background-color: #6c63ff;
-    border-radius: 5px;
-}
+    .main__section-table {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0;
+    }
+    
+    .main__section-table-item {
+        border: 1px solid;
+    }
+    
+    .main__section-table > .main__section-table-item:nth-child(6n + 5),
+    .main__section-table > .main__section-table-item:nth-child(6n + 6) {
+        background-color: bisque;
+    }
+    
+    .main__section-table > .main__section-table-item:nth-child(6n + 8),
+    .main__section-table > .main__section-table-item:nth-child(6n + 9) {
+        background-color: cornsilk;
+    }
+    
+    .main__section-table-item:nth-child(1),
+    .main__section-table-item:nth-child(2),
+    .main__section-table-item:nth-child(3),
+    .main__section-table > .main__section-table-item:nth-child(3n + 1) {
+        background-color: grey;
+    }
 
-.section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-}
-
-.footer {
-    background-color: #333366;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-}
+    @media screen and (max-width: 260px) {
+        .main__section-table {
+            display: none;
+        }
+    }
