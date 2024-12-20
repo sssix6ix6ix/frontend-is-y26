@@ -6,6 +6,7 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
             <li class="nav__item"><a href="projects.html">Проекты</a></li>
             <li class="nav__item"><a href="contact.html">Контакты</a></li>
             <li class="nav__item"><a href="constructor.html">Конструктор расписания занятий</a></li>
-            <li class="nav__item"><a href="todo.html">Пользователи</a></li>
+            <li class="nav__item"><a href="todo.html">TODO list</a></li>
         </ul>
     </nav>
 
@@ -31,8 +32,11 @@
             <div id="todos"></div>
             <div class="error-message"></div>
         </div>
+        <!-- Подключение скриптов для SweetAlert2 и Toastr -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="js/todo.js" defer></script>    
     </main>
-    <script src="js/todo.js" defer></script>
 
     <footer class="footer">
         <p>&copy; 2024 Матвеев Андрей. Все права защищены.</p>

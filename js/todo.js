@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const todosContainer = document.getElementById('todos');
     const errorMessage = document.querySelector('.error-message');
 
-    let filterType = true; // true - фильтр id >= 100, false - id < 100
+    let filterType = true; // Для псевдо-случайной фильтрации
 
     function fetchTodos() {
         preloader.style.display = 'block';
@@ -17,11 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(data => {
                 const filteredTodos = data.filter(todo => {
-                    if (filterType) {
-                        return todo.id >= 100;
-                    } else {
-                        return todo.id < 100;
-                    }
+                    return filterType ? todo.id >= 100 : todo.id < 100;
                 });
                 renderTodos(filteredTodos);
                 filterType = !filterType;
@@ -41,16 +37,35 @@ document.addEventListener('DOMContentLoaded', () => {
         todos.forEach(todo => {
             const todoItem = document.createElement('div');
             todoItem.className = 'todo-item';
+            todoItem.textContent = todo.title;
+
             if (todo.completed) {
                 todoItem.classList.add('completed');
             }
-            todoItem.innerHTML = `
-                <span>${todo.title}</span>
-                <span>${todo.completed ? '✔' : '✘'}</span>
-            `;
 
+            // Обработчик клика для показа модального окна
+            todoItem.addEventListener('click', () => {
+                // SweetAlert2 для отображения модального окна
+                // title: Заголовок модального окна, text: текстовые детали
+                Swal.fire({
+                    title: 'Информация о задаче',
+                    text: `Название: ${todo.title}\nСтатус: ${todo.completed ? 'Выполнена' : 'Не выполнена'}`,
+                    icon: 'info',
+                    showCancelButton: true,
+                    confirmButtonText: 'Изменить статус'
+                }).then(result => {
+                    if (result.isConfirmed) {
+                        todo.completed = !todo.completed;
+                        // Обновление визуального статуса выполнения
+                        todoItem.classList.toggle('completed', todo.completed);
 
-todosContainer.appendChild(todoItem);
+                        // Toastr для отображения уведомления об изменении статуса
+                        toastr.success(`Задача "${todo.title}" обновлена! Статус: ${todo.completed ? 'Выполнена' : 'Не выполнена'}`);
+                    }
+                });
+            });
+
+            todosContainer.appendChild(todoItem);
         });
     }
 
